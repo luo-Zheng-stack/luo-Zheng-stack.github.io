@@ -1,0 +1,243 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "微软雅黑", sans-serif;
+}
+
+body {
+  background-color: #f5f5f5;
+  padding-bottom: 60px;
+  /* 避免底部导航遮挡 */
+}
+
+/* 顶部导航栏 */
+.header {
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  background-color: #fff;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 999;/* 大于998确保层级高于分类，避免被遮挡 */
+}
+
+.header .back-btn {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #333;
+}
+
+.header .back-btn>img {
+  overflow: content-box;
+  width: 20px;
+  height: 20px;
+}
+
+.header .title {
+  flex: 1;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.header .search-btn {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #333;
+}
+
+.header .search-btn>img {
+  width: 30px;
+  height: 30px;
+}
+
+/* 购物车标签栏 */
+.cart-tabs {
+  display: flex;
+  background-color: #fff;
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+  position: sticky; /* 粘性定位 */
+  top: 44px; /* 顶部距离 = 顶部导航栏的高度（根据实际导航栏高度调整，比如导航栏高44px） */
+  z-index: 998; /* 确保层级高于商品列表，避免被遮挡 */
+}
+
+.cart-tab {
+  flex: 1;
+  text-align: center;
+  font-size: 15px;
+  padding: 5px 0;
+}
+.cart-tab.active{
+  border-bottom: 2px solid #f60 ;
+}
+.cart-tab>a{
+  color: #333;
+}
+
+/* 购物车商品列表 */
+.cart-list {
+  background-color: #fff;
+  margin-top: 10px;
+  margin-bottom: 70px;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  border-bottom: 1px solid #f5f5f5;
+}
+
+.cart-item .check-box {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+.cart-item>img {
+  width: 100px;
+  height: 80px;
+  border-radius: 8px;
+  object-fit: cover;
+  margin-right: 10px;
+  filter: drop-shadow(1px 1px 1px #666);
+
+}
+
+.cart-item .item-info {
+  flex: 1;
+}
+
+.item-name {
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.item-spec {
+  font-size: 12px;
+  color: #999;
+  margin-bottom: 5px;
+}
+
+.item-price {
+  font-size: 14px;
+  color: #f60;
+  font-weight: bold;
+}
+
+.add-btn {
+  width: 100px;
+  height: 121px;
+  text-align: center;
+  line-height: 140px;
+}
+
+.add-btn>img {
+  width: 20px;
+  height: 20px;
+}
+
+.minus-btn {
+  width: 100px;
+  height: 121px;
+  text-align: center;
+  line-height: 140px;
+}
+
+.minus-btn>img {
+  width: 20px;
+  height: 20px;
+}
+
+
+
+/* 结算栏 */
+.cart-footer {
+  position: fixed;
+  bottom: 60px;
+  /* 底部导航高度 */
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  padding: 10px 15px;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+
+}
+
+.total-price {
+  flex: 1;
+  font-size: 14px;
+  color: #333;
+}
+
+.total-price .price {
+  color: #f60;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.pay-btn {
+  background-color: #f60;
+  color: #fff;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.pay-btn:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* 底部导航栏（保持不变） */
+.footer-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-around;
+    background-color: #fff;
+    padding: 10px 0;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+    height: 60px; /* 显式设置高度，便于对应padding-bottom */
+}
+
+.footer-item {
+    text-align: center;
+    text-decoration: none;
+    color: #666;
+}
+
+.footer-item img {
+    width: 24px;
+    height: 24px;
+    margin-bottom: 3px;
+    transition: color 0.3s;
+}
+
+.footer-item p {
+    font-size: 12px;
+}
+
+.footer-item:hover {
+  color: #f60;
+}

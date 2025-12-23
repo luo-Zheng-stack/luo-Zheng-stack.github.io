@@ -1,0 +1,163 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "微软雅黑", sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+    padding-bottom: 60px; /* 关键：大于等于底部导航栏的高度 */
+}
+
+/* 顶部导航栏 */
+.header {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    background-color: #fff;
+    /* 核心：粘性定位，滚动时固定在顶部 */
+    position: sticky;
+    top: 0;
+    /* 层级设置，确保header在最上层，不被其他元素遮挡 */
+    z-index: 999;
+    /* 可选：添加阴影，提升悬浮视觉效果 */
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+}
+
+.header .logo {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+.header .search-input {
+    flex: 1;
+    height: 32px;
+    left: 0%;
+    border: 1px solid #333;
+    background-color: #f5f5f5;
+    border-radius: 4px;
+    padding: 0 8px 0 32px;
+}
+.header .login-btn {
+    margin-left: 10px;
+    color: #333;
+    text-decoration: none;
+}
+
+/* 主图区域 */
+
+
+/* 分类导航 */
+.category-nav {
+    display: flex;
+    justify-content: space-around;
+    background-color: #fff;
+    padding: 10px 0;
+    margin-top: 10px;
+}
+
+.category-item {
+    text-align: center;
+}
+
+.category-item img {
+    width: 60px;
+    height: 80px;
+    border-radius: 8px;
+    margin-bottom: 5px;
+    filter: drop-shadow(1px 1px 1px #666);
+}
+
+.category-item p {
+    font-size: 12px;
+    color: #666;
+}
+
+/* 热门商品区域 */
+.hot-goods {
+    margin-top: 10px;
+    background-color: #fff;
+    padding: 15px;
+    /* 关键：限制最大宽度，让区域在大屏上不会过宽，同时水平居中 */
+    max-width: 100%; /* 大屏最大宽度，可根据需求调整 */
+    margin: 0 auto; /* 水平居中 */
+}
+
+.hot-title {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.goods-list {
+    display: flex;
+    flex: 1;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.goods-item {
+    width: calc(50% - 7.5px); /* 50%宽度 - 一半的gap间距（15px/2=7.5px），完美两列 */
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: transform 0.2s;
+    /* 让商品图片在项内居中 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.goods-item img {
+    width: 100%; /* 图片自适应商品项宽度 */
+    max-width: 180px; /* 限制图片最大宽度，避免大屏上过大 */
+    height: 100px;
+    border-radius: 16px;
+    object-fit: cover; /* 保持图片比例，裁剪多余部分 */
+    
+
+}
+ @media (min-width: 1200px) {
+        .goods-item {
+            width: calc(16.666% - 12.5px); /* 六列布局：1/6宽度 - 5/6的gap间距 */
+        }
+    }
+
+/* 商品项hover缩放效果（可选，提升交互） */
+.goods-item:hover {
+    transform: scale(1.03);
+}
+/* 底部导航栏 */
+.footer-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-around;
+    background-color: #fff;
+    padding: 10px 0;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+    height: 60px; /* 显式设置高度，便于对应padding-bottom */
+}
+
+.footer-item {
+    text-align: center;
+    text-decoration: none;
+    color: #666;
+}
+
+.footer-item img {
+    width: 24px;
+    height: 24px;
+    margin-bottom: 3px;
+    transition: color 0.3s;
+}
+
+.footer-item p {
+    font-size: 12px;
+}
+.footer-item:hover {
+  color: #f60;
+}
