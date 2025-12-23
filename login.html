@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>登录界面</title>
+  <!-- 引入CSS样式文件 -->
+  <link rel="stylesheet" href="css/login.css">
+</head>
+
+<body>
+  <!-- 登录容器 -->
+  <div class="login-container">
+    <!-- 头部：Logo + 标题 + 二维码 -->
+    <div class="login-header">
+      <!-- 替换为你的Logo图片 -->
+      <img src="icons/cafe.png" alt="Logo" class="login-logo">
+      <h2 class="login-title">登陆界面</h2>
+      <!-- 替换为你的二维码图片 -->
+      <img src="icons/ma.png" alt="二维码" class="login-qrcode">
+    </div>
+
+    <!-- 表单区域 -->
+    <form class="login-form">
+      <!-- 手机号/用户名输入框 -->
+      <input type="text" class="login-input" placeholder="手机号/用户名">
+      <!-- 密码输入框 -->
+      <input type="password" class="login-input" placeholder="登录密码">
+    </form>
+
+    <!-- 辅助链接 -->
+    <div class="login-links">
+      <a href="#" class="link">忘记密码</a>
+      <a href="#" class="link" onclick="location.href='register.html'">注册</a>
+    </div>
+
+    <!-- 登录按钮 -->
+    <button class="login-btn">登 录</button>
+  </div>
+  <script src="js/login.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>饮品商城页面</title>
+    <link rel="stylesheet" href="./bootstrap-4.6.2-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <!-- 顶部导航栏 -->
+    <div class="header">    
+        <img src="icons/cafe.png" alt="logo" class="logo">
+        <input type="text" placeholder="搜索商品" class="search-input">
+        <a href="login.html" class="login-btn">登录</a>
+    </div>
+
+    <!-- 主图区域-->
+    <div id="carouselExample" class="container carousel slide p-0" data-ride="carousel" data-interval="2000">
+        <!-- 轮播指示器 -->
+        <ol class="carousel-indicators">
+            <li data-target="#carouselExample" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExample" data-slide-to="1"></li>
+            <li data-target="#carouselExample" data-slide-to="2"></li>
+        </ol>
+        <!-- 轮播内容 -->
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <picture>
+                    <source srcset="./images/index/lunbo_1.png" media="(max-width:320px)">
+                    <img src="images/lunbo1.png" class="d-block w-100" alt="轮播1">
+                </picture>
+            </div>
+            <div class="carousel-item">
+                <picture>
+                    <source srcset="./images/index/lunbo_2.png" media="(max-width:320px)">
+                    <img src="images/lunbo2.png" class="d-block w-100" alt="轮播2">
+                </picture>
+            </div>
+            <div class="carousel-item">
+                <picture>
+                    <source srcset="./images/index/lunbo_3.png" media="(max-width:320px)">
+                    <img src="images/lunbo3.png" class="d-block w-100" alt="轮播3">
+                </picture>
+            </div>
+        </div>
+        <!-- 轮播控制按钮 -->
+        <a class="carousel-control-prev" href="#carouselExample" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">上一张</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExample" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">下一张</span>
+        </a>
+    </div>
+
+    <!-- 分类导航 -->
+    <div class="category-nav">
+        <div class="category-item">
+            <img src="images/remen.png" alt="热门推荐">
+            <p>热门推荐</p>
+        </div>
+        <div class="category-item">
+            <img src="images/xinpin.png" alt="新品上市">
+            <p>新品上市</p>
+        </div>
+        <div class="category-item">
+            <img src="images/jijie.png" alt="季节限定">
+            <p>季节限定</p>
+        </div>
+        <div class="category-item">
+            <img src="images/tejia.png" alt="特价拼团">
+            <p>特价拼团</p>
+        </div>
+    </div>
+
+    <!-- 热门商品 -->
+    <div class="hot-goods">
+        <div class="hot-title">热门商品</div>
+        <div class="goods-list">
+            <div class="goods-item">
+                <img src="images/a.png" alt="商品1">
+            </div>
+            <div class="goods-item">
+                <img src="images/b.png" alt="商品2">
+            </div>
+            <div class="goods-item">
+                <img src="images/c.png" alt="商品3">
+            </div>
+            <div class="goods-item">
+                <img src="images/d.png" alt="商品4">
+            </div>
+            <div class="goods-item">
+                <img src="images/e.png" alt="商品5">
+            </div>
+            <div class="goods-item">
+                <img src="images/f.png" alt="商品6">
+            </div>
+            <div class="goods-item">
+                <img src="images/g.png" alt="商品7">
+            </div>
+            <div class="goods-item">
+                <img src="images/h.png" alt="商品8">
+            </div>
+            <div class="goods-item">
+                <img src="images/i.png" alt="商品9">
+            </div>
+            <div class="goods-item">
+                <img src="images/j.png" alt="商品10">
+            </div>
+            <div class="goods-item">
+                <img src="images/k.png" alt="商品11">
+            </div>
+            <div class="goods-item">
+                <img src="images/l.png" alt="商品12">
+            </div>
+        </div>
+    </div>
+
+    <!-- 底部导航 -->
+    <div class="footer-nav">
+        <a href="index.html" class="footer-item">
+            <img src="icons/index.png" alt="首页">
+            <p>首页</p>
+        </a>
+        <a href="category.html" class="footer-item">
+            <img src="icons/category.png" alt="分类">
+            <p>分类</p>
+        </a>
+        <a href="cart.html" class="footer-item">
+            <img src="icons/cart.png" alt="购物车">
+            <p>购物车</p>
+        </a>
+        <a href="login.html" class="footer-item">
+            <img src="icons/my.png" alt="我的">
+            <p>我的</p>
+        </a>
+    </div>
+
+    <!-- 本地Bootstrap依赖的JS（先jQuery，再Bootstrap） -->
+    <script src="./bootstrap-4.6.2-dist/js/jquery-3.6.0.js"></script>
+    <script src="./bootstrap-4.6.2-dist/js/bootstrap.min.js"></script>
+</body>
+</html>

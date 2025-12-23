@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>购物车页面</title>
+  <link rel="stylesheet" type="text/css" href="./bootstrap-4.6.2-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/index.css" />
+    <script src="./bootstrap-4.6.2-dist/js/jquery-3.6.0.js"></script>
+    <script src="./bootstrap-4.6.2-dist/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/cart.css">
+</head>
+<body>
+  <!-- 顶部导航栏 -->
+  <div class="header">
+    <a href="#" class="back-btn" >
+      <img class="back" src="icons/back.png">
+    </a>
+    <div class="title">购物车</div>
+    <a href="#" class="search-btn">
+      <img class="search" src="icons/search.png">
+    </a>
+  </div>
+
+  <!-- 购物车标签栏 -->
+  <div class="cart-tabs">
+    <div class="cart-tab active">
+      <a href="#" class="cart-state" href="#">
+        全部
+    </a>
+    </div>
+    <div class="cart-tab">
+      <a href="#" class="cart-state" href="#">
+        已下单
+    </a>
+    </div>
+  </div>
+
+  <!-- 购物车商品列表 -->
+  <div class="cart-list">
+    <!-- 商品1 -->
+    <div class="cart-item">
+      <input type="checkbox" class="check-box" checked>
+      <img src="images/k.png" alt="浓郁咖啡拿铁">
+      <div class="item-info">
+        <div class="item-name">浓郁咖啡拿铁</div>
+        <div class="item-spec">大杯/常温</div>
+        <div class="item-price">¥25.5</div>
+      </div>
+      <div class="item-num">
+        <a href="#" class="add-btn">
+          <img src="icons/add.png">
+        </a>
+        <a href="#">0</a>
+        <a href="#" class="minus-btn">
+          <img src="icons/minus.png">
+        </a>
+      </div>
+    </div>
+    <!-- 商品2 -->
+    <div class="cart-item">
+      <input type="checkbox" class="check-box" checked>
+      <img src="images/j.png" alt="金烘美式咖啡">
+      <div class="item-info">
+        <div class="item-name">金烘美式咖啡</div>
+        <div class="item-spec">大杯/常温</div>
+        <div class="item-price">¥29.9</div>
+      </div>
+      <div class="item-num">
+        <a href="#" class="add-btn">
+          <img src="icons/add.png">
+        </a>
+        <a href="#">0</a>
+        <a href="#" class="minus-btn">
+          <img src="icons/minus.png">
+        </a>
+      </div>
+    </div>
+    <!-- 商品3 -->
+    <div class="cart-item">
+      <input type="checkbox" class="check-box">
+      <img src="images/j.png" alt="金烘美式咖啡">
+      <div class="item-info">
+        <div class="item-name">金烘美式咖啡</div>
+        <div class="item-spec">大杯/常温</div>
+        <div class="item-price">¥29.9</div>
+      </div>
+      <div class="item-num">
+        <a href="#" class="add-btn">
+          <img src="icons/add.png">
+        </a>
+        <a href="#">0</a>
+        <a href="#" class="minus-btn">
+          <img src="icons/minus.png">
+        </a>
+      </div>
+    </div>
+    <!-- 商品4 -->
+    <div class="cart-item">
+      <input type="checkbox" class="check-box">
+      <img src="images/j.png" alt="金烘美式咖啡">
+      <div class="item-info">
+        <div class="item-name">金烘美式咖啡</div>
+        <div class="item-spec">大杯/常温</div>
+        <div class="item-price">¥29.9</div>
+      </div>
+      <div class="item-num">
+        <a href="#" class="add-btn">
+          <img src="icons/add.png">
+        </a>
+        <a href="#">0</a>
+        <a href="#" class="minus-btn">
+          <img src="icons/minus.png">
+        </a>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- 结算栏 -->
+  <div class="cart-footer">
+    <div class="total-price">合计：<span class="price">¥0.00</span></div>
+    <button class="pay-btn" disabled>去结算</button>
+  </div>
+
+  <!-- 底部导航（保持不变） -->
+  <div class="footer-nav">
+        <a href="#" class="footer-item" onclick="location.href='index.html'">
+            <img src="icons/index.png" alt="首页">
+            <p>首页</p>
+        </a>
+        <a href="#" class="footer-item" onclick="location.href='category.html'">
+            <img src="icons/category.png" alt="分类">
+            <p>分类</p>
+        </a>
+        <a href="#" class="footer-item" onclick="location.href='cart.html'">
+            <img src="icons/cart.png" alt="购物车">
+            <p>购物车</p>
+        </a>
+        <a href="#" class="footer-item" onclick="location.href='login.html'">
+            <img src="icons/my.png" alt="我的">
+            <p>我的</p>
+        </a>
+    </div>
+    <script src="js/cart.js"></script>
+</body>
+
+</html>
